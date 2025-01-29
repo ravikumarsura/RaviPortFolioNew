@@ -106,7 +106,7 @@ function Projects() {
                   ))}
                 </ul>
               </div>
-              <div className="flex justify-between items-center mt-4">
+              {/* <div className="flex justify-between items-center mt-4">
                 <a
                   href={project.link}
                   target="_blank"
@@ -123,7 +123,7 @@ function Projects() {
                 >
                   <FaGithub className="inline mr-1" /> GitHub
                 </a>
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </div>
