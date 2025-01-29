@@ -14,6 +14,12 @@ const navigation = [
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const handleClick = (e, href) => {
+    e.preventDefault();
+    const target = document.querySelector(href);
+    target?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 text-white">
       {/* Header Section */}
@@ -40,6 +46,7 @@ export default function Navbar() {
               <motion.a
                 key={item.name}
                 href={item.href}
+                onClick={(e) => handleClick(e, item.href)}
                 className="text-lg font-medium text-amber-300 hover:text-yellow-300 transition-transform transform hover:scale-105"
                 whileHover={{ scale: 1.1 }}
               >
