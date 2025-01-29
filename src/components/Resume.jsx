@@ -112,17 +112,17 @@ function Resume() {
           </motion.div>
 
           {/* Download Resume Button */}
-          <motion.div className="text-center lg:text-left mt-6" variants={cardVariants}>
+          {/* <motion.div className="text-center lg:text-left mt-6" variants={cardVariants}>
             <a href={resumePDF} download="MyResume">
               <button className="bg-indigo-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-lg shadow-lg hover:bg-indigo-800 transform hover:scale-105 transition">
                 Download Resume (PDF)
               </button>
             </a>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         {/* Right Section */}
-        <motion.div className="lg:w-1/3 w-full flex flex-col items-center justify-center space-y-6" variants={cardVariants}>
+        {/* <motion.div className="lg:w-1/3 w-full flex flex-col items-center justify-center space-y-6" variants={cardVariants}>
           <img
             src={resumePreviewImage}
             alt="Resume Preview"
@@ -133,7 +133,7 @@ function Resume() {
               View Full Resume
             </button>
           </a>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </section>
   );
