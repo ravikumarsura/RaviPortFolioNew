@@ -64,69 +64,64 @@ const projects = [
 
 function Projects() {
   return (
-    <section
-      id="projects"
-      className="py-20 bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-600 text-white relative overflow-hidden"
-    >
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
+    <section className="py-20 bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-600 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
-          className="text-5xl font-extrabold text-center mb-12"
+          className="text-4xl sm:text-5xl font-extrabold text-center mb-12"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
           Projects
         </motion.h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="relative border border-gray-200 rounded-xl shadow-2xl bg-gradient-to-r from-blue-600 to-indigo-700 p-6 text-white transform transition-all duration-500 hover:scale-105 hover:shadow-3xl group"
+              className="border border-gray-200 rounded-xl shadow-lg bg-gradient-to-r from-blue-600 to-indigo-700 p-5 text-white transform transition-all hover:scale-105"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <Swiper
-                spaceBetween={10}
-                slidesPerView={1}
-                loop
-                autoplay={{ delay: 3000 }}
-                className="mb-6 rounded-lg overflow-hidden"
-              >
+              <Swiper className="mb-4 rounded-lg overflow-hidden">
                 <SwiperSlide>
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-60 object-cover rounded-lg transform group-hover:scale-110 transition-all duration-300 ease-in-out"
+                    className="w-full h-56 sm:h-64 object-cover rounded-lg"
                   />
                 </SwiperSlide>
               </Swiper>
-              <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-              <p className="text-gray-200 mb-4">{project.description}</p>
-              <div className="mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold mb-2">{project.title}</h3>
+              <p className="text-gray-200 text-sm sm:text-base mb-4">
+                {project.description}
+              </p>
+              <div>
                 <h4 className="font-semibold text-gray-100">Technologies:</h4>
-                <ul className="list-disc pl-5 text-gray-200">
+                <ul className="flex flex-wrap gap-2 text-gray-200 text-xs sm:text-sm">
                   {project.technologies.map((tech, idx) => (
-                    <li key={idx}>{tech}</li>
+                    <li key={idx} className="bg-gray-800 px-2 py-1 rounded-lg">
+                      {tech}
+                    </li>
                   ))}
                 </ul>
               </div>
-              <div className="flex justify-between items-center mt-6">
+              <div className="flex justify-between items-center mt-4">
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-yellow-300 hover:text-yellow-500 transition-all duration-300 transform group-hover:translate-x-2"
+                  className="text-yellow-300 hover:text-yellow-500 transition-transform hover:translate-x-1"
                 >
-                  <FaExternalLinkAlt className="inline mr-2" /> View Project
+                  <FaExternalLinkAlt className="inline mr-1" /> View
                 </a>
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-200 hover:text-gray-400 transition-all duration-300 transform group-hover:translate-x-2"
+                  className="text-gray-200 hover:text-gray-400 transition-transform hover:translate-x-1"
                 >
-                  <FaGithub className="inline mr-2" /> GitHub Repo
+                  <FaGithub className="inline mr-1" /> GitHub
                 </a>
               </div>
             </motion.div>
@@ -136,4 +131,5 @@ function Projects() {
     </section>
   );
 }
+
 export default Projects;
