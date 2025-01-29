@@ -17,8 +17,8 @@ export default function Navbar() {
   return (
     <div className="bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 text-white">
       {/* Header Section */}
-      <header className="fixed inset-x-0 top-0 z-50 shadow-lg backdrop-blur-md">
-        <nav className="flex items-center justify-between p-4 lg:px-12">
+      <header className="fixed inset-x-0 top-0 z-50 shadow-lg backdrop-blur-md bg-opacity-80">
+        <nav className="flex items-center justify-between px-6 py-4 lg:px-12">
           {/* Logo */}
           <motion.div
             className="flex items-center"
@@ -28,7 +28,7 @@ export default function Navbar() {
           >
             <a
               href="#"
-              className="text-2xl font-bold tracking-wider text-amber-300 hover:text-yellow-300 transition-transform transform hover:scale-110"
+              className="text-2xl font-bold tracking-wide text-amber-300 hover:text-yellow-300 transition-transform transform hover:scale-110"
             >
               Ravikumar Sura
             </a>
@@ -55,7 +55,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(true)}
               className="inline-flex items-center justify-center p-2 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
             >
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              <Bars3Icon className="h-7 w-7" aria-hidden="true" />
             </button>
           </div>
         </nav>
@@ -83,7 +83,7 @@ export default function Navbar() {
             >
               <a
                 href="#"
-                className="text-xl font-bold tracking-wider text-yellow-300"
+                className="text-xl font-bold tracking-wide text-yellow-300"
               >
                 Portfolio
               </a>
@@ -135,21 +135,21 @@ export default function Navbar() {
         />
         <div className="mx-auto max-w-4xl text-center">
           <motion.h1
-            className="text-6xl font-extrabold sm:text-7xl text-yellow-300 tracking-wide"
+            className="text-5xl font-extrabold sm:text-6xl text-yellow-300 tracking-wide"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            Welcome to My Portfolio
+            Elevate My Digital Presence
           </motion.h1>
           <motion.p
-            className="mt-6 text-xl font-medium text-gray-200 sm:mt-8 sm:text-2xl"
+            className="mt-6 text-lg sm:text-xl font-medium text-gray-200"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            Discover my journey, skills, and projects. Let’s build something
-            exceptional together!
+            Crafting innovative solutions through design and technology. Explore
+            my projects, skills, and achievements.
           </motion.p>
           <motion.div
             className="mt-10 flex justify-center gap-x-6"
@@ -159,15 +159,15 @@ export default function Navbar() {
           >
             <a
               href="#projects"
-              className="rounded-md bg-yellow-400 px-6 py-3 text-lg font-semibold text-black hover:bg-yellow-500 shadow-lg transform hover:scale-105 transition"
+              className="rounded-lg bg-yellow-400 px-6 py-3 text-lg font-semibold text-black hover:bg-yellow-500 shadow-lg transform hover:scale-105 transition"
             >
-              View Projects
+              Explore Projects
             </a>
             <a
               href="#contact"
-              className="rounded-md border border-yellow-300 px-6 py-3 text-lg font-semibold hover:bg-yellow-500 hover:text-black transition"
+              className="rounded-lg border border-yellow-300 px-6 py-3 text-lg font-semibold hover:bg-yellow-500 hover:text-black transition"
             >
-              Contact Me
+              Get in Touch
             </a>
           </motion.div>
         </div>

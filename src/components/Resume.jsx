@@ -21,7 +21,6 @@ function Resume() {
          Demonstrated strong logical ability, a systematic approach to problem analysis, solution design, and excellent debugging and troubleshooting skills.
       `,
     },
-
     {
       title: "Web Developer",
       company: "Purpleplum",
@@ -33,23 +32,20 @@ function Resume() {
          Optimized web performance by reducing page load times and improving overall efficiency through clean, reusable code and best practices.
          Integrated APIs to enhance application functionality, enabling dynamic data retrieval and display.
          Conducted cross-browser testing to ensure compatibility across major web browsers.
-        Contributed to multiple projects simultaneously, meeting tight deadlines and delivering high-quality results.
-        Participated in team meetings and brainstorming sessions to propose innovative solutions for enhancing product features.
+         Contributed to multiple projects simultaneously, meeting tight deadlines and delivering high-quality results.
+         Participated in team meetings and brainstorming sessions to propose innovative solutions for enhancing product features.
       `,
     },
   ];
 
   const education = [
     {
-      degree:
-        "Bachelor of Technology in Electrical and Electronics Engineering",
+      degree: "Bachelor of Technology in Electrical and Electronics Engineering",
       institution: "Gokul Institute of Technology and Sciences",
-      // duration: "2018 - 2022",
     },
     {
       degree: "Higher Secondary Education",
       institution: "Narayana Junior College",
-      // duration: "2014 - 2016",
     },
   ];
 
@@ -68,71 +64,57 @@ function Resume() {
   };
 
   return (
-    <section
-      id="resume"
-      className="bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100 py-20 px-6"
-    >
+    <section id="resume" className="bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100 py-16 px-4 sm:px-6 lg:px-12">
       <motion.div
-        className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16"
+        className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12"
         initial="hidden"
         animate="visible"
         variants={sectionVariants}
       >
         {/* Left Section */}
         <div className="lg:w-2/3 w-full space-y-10">
-          <motion.h2
-            className="text-5xl font-extrabold text-indigo-700 text-center lg:text-left"
-            variants={cardVariants}
-          >
+          <motion.h2 className="text-4xl sm:text-5xl font-extrabold text-indigo-700 text-center lg:text-left" variants={cardVariants}>
             Resume
           </motion.h2>
 
           {/* Experience Section */}
-          <motion.div className="space-y-10" variants={cardVariants}>
-            <h3 className="text-3xl font-semibold text-gray-800">Experience</h3>
+          <motion.div className="space-y-8" variants={cardVariants}>
+            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-800">Experience</h3>
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transform hover:scale-105 transition duration-300"
+                className="bg-white rounded-xl shadow-lg p-6 sm:p-8 hover:shadow-2xl transform hover:scale-105 transition duration-300"
                 whileHover={{ scale: 1.05 }}
                 variants={cardVariants}
               >
-                <h4 className="text-2xl font-semibold text-gray-800">
-                  {exp.title}
-                </h4>
+                <h4 className="text-xl sm:text-2xl font-semibold text-gray-800">{exp.title}</h4>
                 <p className="text-lg text-gray-600">{exp.company}</p>
                 <p className="text-sm text-gray-500 mb-4">{exp.duration}</p>
-                <p className="text-gray-700">{exp.description}</p>
+                <p className="text-gray-700 leading-relaxed">{exp.description}</p>
               </motion.div>
             ))}
           </motion.div>
 
           {/* Education Section */}
-          <motion.div className="space-y-10" variants={cardVariants}>
-            <h3 className="text-3xl font-semibold text-gray-800">Education</h3>
+          <motion.div className="space-y-8" variants={cardVariants}>
+            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-800">Education</h3>
             {education.map((edu, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transform hover:scale-105 transition duration-300"
+                className="bg-white rounded-xl shadow-lg p-6 sm:p-8 hover:shadow-2xl transform hover:scale-105 transition duration-300"
                 whileHover={{ scale: 1.05 }}
                 variants={cardVariants}
               >
-                <h4 className="text-2xl font-semibold text-gray-800">
-                  {edu.degree}
-                </h4>
+                <h4 className="text-xl sm:text-2xl font-semibold text-gray-800">{edu.degree}</h4>
                 <p className="text-lg text-gray-600">{edu.institution}</p>
-                <p className="text-sm text-gray-500">{edu.duration}</p>
               </motion.div>
             ))}
           </motion.div>
 
           {/* Download Resume Button */}
-          <motion.div
-            className="text-center lg:text-left mt-8"
-            variants={cardVariants}
-          >
+          <motion.div className="text-center lg:text-left mt-6" variants={cardVariants}>
             <a href={resumePDF} download="MyResume">
-              <button className="bg-indigo-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:bg-indigo-800 transform hover:scale-105 transition">
+              <button className="bg-indigo-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-lg shadow-lg hover:bg-indigo-800 transform hover:scale-105 transition">
                 Download Resume (PDF)
               </button>
             </a>
@@ -140,19 +122,14 @@ function Resume() {
         </div>
 
         {/* Right Section */}
-        <motion.div
-          className="lg:w-1/3 w-full flex flex-col items-center justify-center space-y-6"
-          variants={cardVariants}
-        >
-          {/* PDF Preview Image */}
+        <motion.div className="lg:w-1/3 w-full flex flex-col items-center justify-center space-y-6" variants={cardVariants}>
           <img
             src={resumePreviewImage}
             alt="Resume Preview"
-            className="rounded-xl shadow-lg border border-gray-300 hover:shadow-xl transform hover:scale-105 transition duration-300"
+            className="rounded-lg shadow-lg border border-gray-300 hover:shadow-xl transform hover:scale-105 transition duration-300 w-full max-w-xs sm:max-w-sm"
           />
-          {/* View PDF Button */}
           <a href={resumePDF} target="_blank" rel="noopener noreferrer">
-            <button className="bg-indigo-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:bg-indigo-800 transform hover:scale-105 transition">
+            <button className="bg-indigo-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-lg shadow-lg hover:bg-indigo-800 transform hover:scale-105 transition">
               View Full Resume
             </button>
           </a>
